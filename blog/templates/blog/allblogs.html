@@ -123,8 +123,6 @@
     </style>
 
 
-</head>
-
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
@@ -212,24 +210,47 @@
                             <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
                         </li>
                         <!-- <li class="nav-item dropdown"> -->
-                        <a class="nav-link active" href="http://www.linkedin.com/in/safayet-" >Linked In
-                        </a>
-                        <!--<ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul> -->
+                        <!-- <a class="nav-link " href="http://www.linkedin.com/in/safayet-" >Linked In -->
+                            <div class="dropdown-center">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Find Me
+                                  </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="http://www.linkedin.com/in/safayet-">LinkedIn</a></li>
+                                    <li><a class="dropdown-item" href="https://twitter.com/MdSafayet_Islam">Twiter</a></li>
+                                    <li><a class="dropdown-item" href="https://www.facebook.com/safayet.412">Facebook</a></li>
+                                    <li><a class="dropdown-item" href="#">Instagram</a></li>
+    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"></li>
+                            <a class="nav-link" href="{% url 'rehome' %}">Research</a>
                         </li>
 
                     </ul>
-                    <form class="d-flex ms-3">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="d-flex ms-3" role="search" onsubmit="return handleSearch()">
+                        <input class="form-control me-2" type="search" id="searchQuery" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                      </form>
                 </div>
             </div>
         </nav>
+
+
+          <!-- JavaScript to handle search -->
+  <script>
+    function handleSearch() {
+      var query = document.getElementById('searchQuery').value;
+      if (query.trim() === "") {
+        alert('Please enter a search term');
+        return false;  // Prevent form submission
+      }
+      // Redirect to a search engine or handle it as needed
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+      return false;  // Prevent default form submission
+    }
+  </script>
 
     </header>
 
