@@ -255,23 +255,34 @@
     </header>
 
     <main role ="main">
-        <div class=" container">
-            <h1 class="text-center pt-4"> Wellcome to SFYT's Blog </h1>
+        
+        <div class="container">
+            <h1 class="text-center pt-4">Welcome to SFYT's Blog</h1>
             <br />
             <br />
-            <h2>latest Drop</h2>
+            <h2>Latest Drop</h2>
             <hr />
         
-            {%for blog in blogs.all %}
-            <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
-            {{ blog.pub_date_pretty }}
-            <br />
-            <img class="img-fluid" src="{{ blog.image.url }}" height="200" width="200"/>
-            <br />
-            <p>{{ blog.summary }}</p>
-            {% endfor %}
+            <!-- Loop through all blog entries -->
+            {% for blog in blogs %}
+            <a href="{% url 'detail' blog.id %}">
+                <h3>{{ blog.title }}</h3>
+            </a>
+            <p>{{ blog.pub_date_pretty }}</p>
             
-        </div>   
+            <!-- Display blog image -->
+            <img class="img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}" height="200" width="200" />
+            <br />
+            
+            <!-- Display blog summary with stripped HTML tags -->
+            <p>{{ blog.summary|striptags }}</p>
+            <hr />
+            
+            {% endfor %}
+        </div>
+        
+        
+         
         
 
 

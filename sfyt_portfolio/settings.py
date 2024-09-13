@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    'contact',
+    'ckeditor',
     'research.apps.ResearchConfig',
     'blog.apps.BlogConfig',
     'jobs.apps.JobsConfig',
@@ -41,7 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
+# CKEditor Config (optional, but you can add custom toolbar options here)
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,3 +150,13 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'safayetakash@gmail.com'  # Replace with your Gmail address
+EMAIL_HOST_PASSWORD = 'logic20butless'  # Replace with your Gmail password
+DEFAULT_FROM_EMAIL = 'safayetakash@gmail.com'
+EMAIL_HOST_PASSWORD = 'ilgxqdsztfvmgozo'  # Replace with the new app password

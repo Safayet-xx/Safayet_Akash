@@ -1,0 +1,266 @@
+:root {
+  --primary-color: #3498db; /* Light Blue */
+  --secondary-color: #262b31; /* Dark Blue-gray */
+  --accent-color: #ecf0f1; /* Light Gray */
+  --text-color: #1a1c20; /* Dark Text */
+  --background-color-light: #ecf0f1; /* Light background */
+  --background-color-dark: #2c3e50; /* Dark background */
+  --hero-text-color-light: #1a1c20; /* Dark text on light background */
+  --hero-text-color-dark: #ecf0f1; /* Light text on dark background */
+}
+
+body.light-theme {
+  background-color: var(--background-color-light);
+  color: var(--text-color);
+}
+
+body.dark-theme {
+  background-color: var(--background-color-dark);
+  color: var(--hero-text-color-dark);
+}
+
+.btn-toggle {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-toggle:hover {
+  background-color: #85a3b7; /* Slightly darker blue */
+}
+
+#theme-icon {
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Courier New', Courier, monospace;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+
+/* General Container */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar .nav-link {
+  color: #ecf0f1 !important; /* Softer white */
+  padding: 8px 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: #fff !important;
+}
+
+.navbar .dropdown-menu {
+  background-color: var(--secondary-color);
+}
+
+.navbar .dropdown-item {
+  color: #fff;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-outline-success {
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* SECTION 1: Hero */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  gap: 10px; /* Reduced gap between text and image */
+}
+
+.hero-section .text {
+  margin-left: auto; /* Add this to push the text to the right */
+}
+
+.hero-section .headshot {
+  margin-right: -40; /* Add this to push the image to the left */
+}
+
+.hero-section .text h2 {
+  font-size: 45px;
+  color: var(--secondary-color);
+}
+
+.hero-section .text .links a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  transition: .1s;
+}
+
+.hero-section .text .links a:hover {
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+}
+
+.hero-section .headshot img {
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* border: 3px solid var(--primary-color); */
+  padding-right: 20px; /* add padding to the right */
+  margin-left: 0; /* Remove the negative margin */
+}
+
+/* SECTION 2: Skills */
+.skills-section h2 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--secondary-color);
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--accent-color);
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+
+/* SECTION 3: Testimony */
+.testimony-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+.testimony-section .group .person-details img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid var(--primary-color);
+}
+
+/* SECTION 4: Contact */
+.contact-section h2 {
+  font-size: 35px;
+  color: var(--secondary-color);
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+  border: 2px solid var(--primary-color);
+  background-color: var(--accent-color);
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-section .group form button {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  transition: .1s;
+}
+
+.contact-section .group form button:hover {
+  filter: brightness(.9);
+}
+
+/* Media Queries */
+@media (max-width: 850px) {
+  .hero-section .text h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 740px) {
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+
+  .hero-section .headshot img {
+    width: 300px;
+  }
+
+  .testimony-section .group {
+    flex-direction: column;
+  }
+
+  .contact-section .group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 10px;
+  }
+
+  .hero-section, .skills-section, .testimony-section, .contact-section {
+    padding: 0 10px;
+  }
+}

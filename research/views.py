@@ -4,6 +4,6 @@ from .models import ResearchPaper
 
 def rehome(request):
 
-    ResearchPapers = ResearchPaper.objects
+    ResearchPapers = ResearchPaper.objects.all()
 
     return render(request, 'research/rehome.html',{'ResearchPapers':ResearchPapers})
