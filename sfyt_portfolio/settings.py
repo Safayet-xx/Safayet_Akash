@@ -157,6 +157,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'safayetakash@gmail.com'  # Replace with your Gmail address
-EMAIL_HOST_PASSWORD = 'logic20butless'  # Replace with your Gmail password
 DEFAULT_FROM_EMAIL = 'safayetakash@gmail.com'
 EMAIL_HOST_PASSWORD = 'ilgxqdsztfvmgozo'  # Replace with the new app password
