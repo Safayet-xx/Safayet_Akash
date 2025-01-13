@@ -19,3 +19,4 @@ class ResearchPaperAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': CKEditorWidget},
     }
+    
