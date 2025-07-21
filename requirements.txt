@@ -27,4 +27,6 @@ virtualenv==20.26.1
 whitenoise==3.3.0
 django-import-export==3.3.4
 djangorestframework==3.15.1
-
+django
+gunicorn
+whitenoise
