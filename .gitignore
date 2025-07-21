@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtualenv
+venv/
+env/
+ENV/
+*.env
+*.venv
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+local_settings.py
+media/
+staticfiles/
+static/
+
+# Environment Variables
+.env
+.env.*
+
+# VSCode and IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Migrations (optional — keep if tracking DB schema is important)
+**/migrations/__pycache__/
+**/migrations/*.pyc
+# Uncomment below to ignore migrations completely (optional)
+# **/migrations/*.py
+
+# Docker
+*.pid
+docker-compose.override.yml
+__MACOSX/
+
+# PostgreSQL volume (if used outside container)
+postgres_data/
+
+# pycache inside Docker volumes
+**/__pycache__/
+
+# Coverage/test artifacts
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# Node (if used)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# My backup dumps
+*.sql
+*.dump
+backup.*

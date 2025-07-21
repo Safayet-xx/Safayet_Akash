@@ -1,126 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
 
+{% block title %}Home | MD SAFAYET ISLAM{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD SAFAYET ISLAM</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-
-    <!-- Inline Navbar Styles -->
-    <style>
-        /* Navbar Link Styles */
-        .navbar .nav-link {
-            color: #003049 !important; /* Dark blue for good contrast */
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .navbar .nav-link:hover {
-            color:rgb(23, 22, 22) !important; /* Highlight color on hover */
-        }
-    </style>
-
-
-
-
-</head>
-
-<body>
-
-
-    <!-- NAVBAR -->
-
-
-
-<header>
-    <nav class="navbar navbar-expand-lg bg-light shadow-sm">
-        <div class="container">
-            <!-- Brand Logo -->
-            <a class="navbar-brand fw-bold" href="{% url 'home' %}" style="font-family: 'Poppins', sans-serif; color: #003049; font-size: 1.8rem;">
-                SAFAYET <span style="font-weight: 300;">(আকাশ)</span>
-            </a>
-
-            <!-- Navbar Toggle Button for Mobile View -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="{% static 'Md Safayet Islam(CV).pdf' %}">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="{% url 'allblogs' %}">Blog</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="findMeDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Find Me
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="http://www.linkedin.com/in/safayet-">LinkedIn</a></li>
-                            <li><a class="dropdown-item" href="https://twitter.com/MdSafayet_Islam">Twitter</a></li>
-                            <li><a class="dropdown-item" href="https://www.facebook.com/safayet.412">Facebook</a></li>
-                            <li><a class="dropdown-item" href="https://www.instagram.com/safayet_akash/">Instagram</a></li>
-                            <li><a class="dropdown-item" href="https://github.com/Safayet-xx">Github</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="{% url 'rehome' %}">Research</a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-</header>
-
-
+{% block content %}
 <!-- HERO SECTION -->
 <section class="hero-section d-flex align-items-center py-5" style="position: relative; overflow: hidden;">
     <div class="container">
         <div class="row align-items-center">
-            <!-- Left Content -->
             <div class="col-lg-6">
                 <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif; font-size: 2.5rem;">
                     Hey 👋 I'm <br>
-                    <span style="color: #ff5722;">Md Safayet Islam  😇 </span>
+                    <span style="color: #ff5722;">Md Safayet Islam 😇</span>
                 </h2>
-                <h4 class="fw-light" style="color: #777;">BSc. in Computer Science and Engineering </h4>
+                <h4 class="fw-light" style="color: #777;">BSc. in Computer Science and Engineering</h4>
                 <p style="color: #555;">
-                    I am passionate about exploring new challenges and opportunities to develop my technical skills and
-                    contribute creatively to the growth of an organization. Beyond my professional pursuits, I enjoy exploring new
-                    places and learning about different cultures.
+                    I am passionate about exploring new challenges and opportunities to develop my technical skills and contribute creatively to the growth of an organization. Beyond my professional pursuits, I enjoy exploring new places and learning about different cultures.
                 </p>
                 <a href="#contact" class="btn btn-danger px-4 py-2" style="border-radius: 30px;">Contact Me</a>
             </div>
-
-            <!-- Right Content -->
             <div class="col-lg-6 text-center">
                 <div style="position: relative; display: inline-block;">
                     <img src="{% static 'sfyt1.jpg' %}" alt="Safayet's Headshot" class="img-fluid rounded-circle"
-                        style="border: 5px solid #000; width: 300px; height: 300px;">
+                         style="border: 5px solid #000; width: 300px; height: 300px;">
                     <div style="position: absolute; top: -15px; left: -15px; width: 330px; height: 330px; border: 5px solid #ff5722; border-radius: 50%;"></div>
                     <div style="position: absolute; top: -30px; left: -30px; width: 360px; height: 360px; border: 5px dashed #ff5722; border-radius: 50%;"></div>
                 </div>
@@ -129,73 +31,56 @@
     </div>
 </section>
 
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section p-5">
-            <div class="text-center mb-4">
-                <h2 style="
-                    display: inline-block;
-                    background-color: #ff5722;
-                    color:rgb(255, 255, 255);
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    padding: 10px 20px;
-                    border-radius: 15px;
-                    text-align: center;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                ">
-                    Projects & Skills
-                </h2>
-            </div>
-            <div class="text-center mb-4">
-                Here are some of my key skills and recent projects. Explore more on my 
-                <a href="https://github.com/Safayet-xx" target="_blank" style="color: #003049; text-decoration: underline; font-weight: bold;">
-                    GitHub
-                </a>.
-            </div>
-            <div class="container">
-                <div class="row">
-                    <!-- Card 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card shadow-sm h-100">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Automated Invoice maker and management System </h5>
-                                <p class="card-text">This project is an Invoice Management Application that allows users to create, view, update, print, and manage invoices. It integrates Firebase Firestore as the backend for data storage and Cloudinary for image uploads. The application is built using React.js, with a responsive design that ensures a seamless user experience on both desktop and mobile devices. The project includes role-based features, such as restricting access to dashboard pages unless the user's profile is saved. It has a modular structure with reusable components for profile management, invoice handling, and dashboard navigation. The app is designed for businesses to manage customer details, product inventories, and invoice creation efficiently.</p>
-                                <a href="https://github.com/Safayet-xx/Invoices" class="btn btn-primary btn-sm">Find it on Github </a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Card 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card shadow-sm h-100">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Detection and Classification of Diabetic Retinopathy Using GAN</h5>
-                                <p class="card-text">Diabetic retinopathy (DR), a leading cause of vision loss, is a diabetes-related complication caused by retinal blood vessel damage. Its early detection and classification into stages (mild, moderate, severe, proliferative) are essential for timely treatment. My project focused on building a robust system for the detection and classification of DR using a combination of deep learning models and Generative Adversarial Networks (GANs).
-                                    We initially sought a dataset from Vision Eye Hospital, consulting with Prof. Dr. Siddiqur Rahman and senior doctors. Despite facing issues obtaining the dataset, but things didn’t go on our way So, we had to utilized publicly available datasets such as Kaggle's APTOS 2019 or EyePACS for retinal images. Preprocessing steps included resizing images, enhancing contrast, and removing noise. A CNN-based architecture was developed for feature extraction and classification of DR stages, leveraging transfer learning to boost accuracy. To overcome dataset limitations, GANs were employed to generate synthetic retinal images, enhancing the diversity and balance of the training set.
-                                    This integration of GANs and CNNs significantly improved the model's ability to generalize across varying DR features, achieving high accuracy and reliability in detection and classification. The project demonstrated the potential of AI in advancing automated DR diagnosis, particularly in resource-constrained settings, while laying the foundation for future improvements and research.
-                                    </p>
-                                <a href="https://github.com/Safayet-xx/Detection-and-classification-of-Diabetic-Retinopathy" class="btn btn-primary btn-sm">Find it on Github</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Card 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card shadow-sm h-100">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Strategies for Effective Malware Analysis</h5>
-                                <p class="text-muted">Published on: Sept. 14, 2024</p>
-                                <p class="card-text">Accepted at IEEE Conference on Computing, Applications and Systems (COMPAS 2024). This research provides an in-depth strategy for malware detection and prevention using machine learning algorithms...</p>
-                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills-section p-5">
+    <div class="text-center mb-4">
+        <h2 class="bg-danger text-white px-4 py-2 rounded d-inline-block shadow">Projects & Skills</h2>
+    </div>
+    <div class="text-center mb-4">
+        Here are some of my key skills and recent projects. Explore more on my 
+        <a href="https://github.com/Safayet-xx" target="_blank" class="fw-bold text-decoration-underline" style="color: #003049;">
+            GitHub
+        </a>.
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Automated Invoice Maker & Management</h5>
+                        <p class="card-text">A React.js app for creating and managing invoices with Firebase & Cloudinary. Includes dashboard, profile logic, and modular design.</p>
+                        <a href="https://github.com/Safayet-xx/Invoices" class="btn btn-primary btn-sm">Find it on GitHub</a>
                     </div>
                 </div>
             </div>
-        </section>
-        
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">DR Detection with GAN</h5>
+                        <p class="card-text">Built an AI model using CNN + GAN to classify diabetic retinopathy stages. Used APTOS/EyePACS dataset and data augmentation via GANs.</p>
+                        <a href="https://github.com/Safayet-xx/Detection-and-classification-of-Diabetic-Retinopathy" class="btn btn-primary btn-sm">Find it on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Malware Analysis Strategy</h5>
+                        <p class="text-muted">Published: Sept. 14, 2024</p>
+                        <p class="card-text">Presented at IEEE COMPAS 2024. A strategy paper on malware detection using machine learning and threat response.</p>
+                        <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+
+<!-- TESTIMONY SECTION -->
         <!-- Testimony Section -->
         <section id="testimony" class="testimony-section p-5">
             <div class="text-center mb-4">
@@ -241,103 +126,43 @@
 
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section p-5">
-            <div class="text-center mb-4">
-                <h2 style="
-                    display: inline-block;
-                    background-color: #ff5722;
-                    color: #003049;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    padding: 10px 20px;
-                    border-radius: 15px;
-                    text-align: center;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                ">
-                Contact
-                </h2>
-                <br>
-                <br>
-                <br>
-            <div class="group d-flex justify-content-between">
-                <div class="text flex-grow-1 me-5">
-                    <h2>H! there 👋</h2>
-                    
-                    <h2>Thanks for stopping by!</h2>
-                    <p>I'm always happy to connect with like-minded individuals. I'm excited to hear your thoughts.</p>
-                    <p>Please don't hesitate to contact me. Leave me a note so that I can follow up on your interest.
-                    </p>
-                    <p> <strong>Your visit is appreciated.</strong></p>
-                </div>
-                <form class="flex-grow-1" action="{% url 'contact' %}" method="POST">
-                    {% csrf_token %}
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control mb-2" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control mb-2" required>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" cols="30" rows="5" class="form-control mb-2"
-                        required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </section>
-
-
-    </main>
-<hr>
-    <footer class="text-body-secondary py-5">
-        <div class="container text-center">
-            <p class="float-end mb-1">
-                <a href="#">Back to top</a>
-            </p>
-            <p class="mb-1">&copy;Engineer_Down{%now "Y" %}</p>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section p-5">
+    <div class="text-center mb-4">
+        <h2 style="
+            display: inline-block;
+            background-color: #ff5722;
+            color: #003049;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        ">
+        Contact
+        </h2>
+        <br><br><br>
+    </div>
+    <div class="group d-flex justify-content-between flex-column flex-lg-row">
+        <div class="text flex-grow-1 me-lg-5 mb-4 mb-lg-0">
+            <h2>H! there 👋</h2>
+            <h2>Thanks for stopping by!</h2>
+            <p>I'm always happy to connect with like-minded individuals. I'm excited to hear your thoughts.</p>
+            <p>Please don't hesitate to contact me. Leave me a note so that I can follow up on your interest.</p>
+            <p><strong>Your visit is appreciated.</strong></p>
         </div>
-    </footer>
+        <form class="flex-grow-1" action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control mb-2" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control mb-2" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" cols="30" rows="5" class="form-control mb-2" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Theme Toggle Script -->
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-
-        themeToggle.addEventListener('click', () => {
-            if (document.body.classList.contains('dark-theme')) {
-                document.body.classList.remove('dark-theme');
-                themeIcon.textContent = '🌞'; // Sun icon for light theme
-            } else {
-                document.body.classList.add('dark-theme');
-                themeIcon.textContent = '🌜'; // Moon icon for dark theme
-            }
-        });
-
-        // Check for saved theme preference
-        document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-theme');
-                themeIcon.textContent = '🌜';
-            } else {
-                document.body.classList.remove('dark-theme');
-                themeIcon.textContent = '🌞';
-            }
-        });
-
-        // Save theme preference
-        document.body.addEventListener('classChange', () => {
-            if (document.body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    </script>
-
-    <!-- Custom Styles for Dark Theme -->
-
-
-</body>
-
-</html>
+{% endblock %}

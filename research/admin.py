@@ -6,6 +6,9 @@ from django.contrib import admin
 from.models import ResearchPaper
 from ckeditor.widgets import CKEditorWidget
 from django.db import models
+from import_export.admin import ExportMixin
+from .models import ResearchPaper
+
 
 @admin.register(ResearchPaper)
 
