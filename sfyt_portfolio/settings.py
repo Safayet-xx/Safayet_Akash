@@ -65,29 +65,36 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sfyt_portfolio.wsgi.application'
 #import dj_database_url
-import dj_database_url
+#import dj_database_url
+
+# DATABASES = {
+    
+#         'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+    
+
+#         #'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+
+
+#    # 'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+#     #'default': {
+#         #'ENGINE': 'django.db.backends.postgresql',
+#         #'NAME': os.getenv('DB_NAME', 'portfoliodb'),
+#         #'USER': os.getenv('DB_USER', 'postgres'),
+#         #'PASSWORD': os.getenv('DB_PASSWORD', '123456'),
+#         #'HOST': os.getenv('DB_HOST', 'localhost'),
+#         #'PORT': os.getenv('DB_PORT', '5432'),
+#     }
+
 
 DATABASES = {
-    
-        'default': {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-    
-
-        #'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-
-
-   # 'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-    #'default': {
-        #'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': os.getenv('DB_NAME', 'portfoliodb'),
-        #'USER': os.getenv('DB_USER', 'postgres'),
-        #'PASSWORD': os.getenv('DB_PASSWORD', '123456'),
-        #'HOST': os.getenv('DB_HOST', 'localhost'),
-        #'PORT': os.getenv('DB_PORT', '5432'),
-    }
-
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
