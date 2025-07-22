@@ -36,7 +36,7 @@ CKEDITOR_CONFIGS = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -64,8 +64,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sfyt_portfolio.wsgi.application'
+#import dj_database_url
 
 DATABASES = {
+    
+   # 'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DB_NAME', 'portfoliodb'),
@@ -91,7 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
